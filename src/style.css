@@ -821,7 +821,7 @@ p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -1403,6 +1403,225 @@ p {
   width: 1px;
   height: 28px;
   background-color: var(--border-muted);
+}
+
+/* ==========================================================================
+   10.5 PROFESSIONAL EXPERIENCE
+   ========================================================================== */
+.experience-section {
+  border-top: 1px solid var(--border-muted);
+  background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(9, 9, 11, 0.4) 100%);
+  padding: 100px 0;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-muted);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--border-muted);
+  transition: background-color 0.3s;
+}
+
+.experience-item:hover {
+  border-color: rgba(14, 165, 233, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item:hover::before {
+  background: var(--accent-cyan);
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.company-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.role-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent-cyan);
+}
+
+.experience-date {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 99px;
+  padding: 4px 10px;
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-bullets li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 18px;
+}
+
+.experience-bullets li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.experience-bullets strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.experience-associated-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.assoc-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.assoc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.assoc-project-link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.assoc-project-link::after {
+  content: "↗";
+  font-size: 0.72rem;
+  transition: transform 0.2s;
+}
+
+.assoc-project-link:hover {
+  color: var(--text-primary);
+}
+
+.assoc-project-link:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.experience-divider {
+  height: 1px;
+  background: radial-gradient(circle, var(--border-muted) 0%, transparent 80%);
+  margin: 10px 0;
+}
+
+/* Company / Association badges inside Project Cards */
+.project-company-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.project-company-badge.accent {
+  color: var(--accent-cyan);
+  border-color: rgba(14, 165, 233, 0.25);
+  background: rgba(14, 165, 233, 0.02);
+}
+
+.project-company-badge.success {
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.02);
+}
+
+@media (max-width: 992px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 /* ==========================================================================
