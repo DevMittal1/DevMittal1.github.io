@@ -377,36 +377,178 @@
           </div>
 
           <div class="projects-grid">
-            <!-- PROJECT 1: Legal RAG -->
-            <article class="project-card" id="project-rag" data-category="rag">
-              <div class="project-badge">RAG PIPELINE</div>
-              <h3 class="project-title">Enterprise Legal Research RAG System</h3>
-              <p class="project-summary">Helps legal teams search, synthesize, and answer queries from internal and external documents with fully grounded, verified responses.</p>
+            <!-- PROJECT 1: Shopify Multi-Agent -->
+            <article class="project-card" id="project-shopify-multiagent" data-category="agentic">
+              <div class="project-badge">MULTI-AGENT SYSTEM</div>
+              <h3 class="project-title">Enterprise Shopify Multi-Agent Platform</h3>
+              <p class="project-summary">Automates customer support, order management, refunds, inventory, and shipping updates across 10K+ daily queries using cooperative sub-agents.</p>
               
               <div class="project-specs-box">
                 <div class="spec-group">
                   <span class="spec-header">Core Challenge</span>
-                  <p class="spec-val">Eliminating legal hallucination risks during multi-docket comparisons containing heavily legacy PDF scans.</p>
+                  <p class="spec-val">Eliminating billing hallucinations, preventing routing loops, and maintaining state recovery during volatile traffic spikes.</p>
                 </div>
                 <div class="spec-group">
                   <span class="spec-header">Architecture Features</span>
                   <ul class="spec-list">
-                    <li>Chunk-parent mapping hierarchies with custom slide tokenizers.</li>
-                    <li>Hybrid Vector (HNSW) + Sparse (BM25) search with dense Cohere reranker.</li>
-                    <li>Strict citation verification layer validating NLI premise mappings.</li>
+                    <li>Supervisor-sub-agent routing pattern using LangGraph state-charts.</li>
+                    <li>Shared Redis Memory Bus for inter-agent message passing and state persistence.</li>
+                    <li>Qdrant vector database enabling context-aware retrieval-augmented generation.</li>
                   </ul>
                 </div>
                 <div class="spec-group">
                   <span class="spec-header">Outcome / Impact</span>
-                  <p class="spec-val text-success">Reduces manual paralegal briefing review times by 82% while scoring a 98.6% Ragas compliance index.</p>
+                  <p class="spec-val text-success">Reduces operational costs by 65% with a 4× throughput increase and zero post-deployment billing hallucinations.</p>
                 </div>
               </div>
 
               <div class="project-tech-row">
+                <span>LangGraph</span>
+                <span>GPT-4o</span>
+                <span>Redis</span>
+                <span>Qdrant</span>
                 <span>FastAPI</span>
+                <span>AWS ECS</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/DevMittal1" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Repository
+                </a>
+                <span class="link-divider"></span>
+                <a href="docs/shopify_multiAIAgent.md" target="_blank" rel="noopener noreferrer" class="link-btn accent">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Detailed Spec
+                </a>
+              </div>
+            </article>
+
+            <!-- PROJECT 2: WooCommerce DeepAgent -->
+            <article class="project-card" id="project-woocommerce-deepagent" data-category="agentic">
+              <div class="project-badge">DEEP AGENTS</div>
+              <h3 class="project-title">E-commerce Research & Growth DeepAgent</h3>
+              <p class="project-summary">Autonomous research analyst running multi-step growth investigations across ad channels, competitor pricing, and store performance.</p>
+              
+              <div class="project-specs-box">
+                <div class="spec-group">
+                  <span class="spec-header">Core Challenge</span>
+                  <p class="spec-val">Maintaining long-horizon context and validating facts across meta ads, competitor websites, and store data.</p>
+                </div>
+                <div class="spec-group">
+                  <span class="spec-header">Architecture Features</span>
+                  <ul class="spec-list">
+                    <li>Planner/reflection loop utilizing a Critic agent to critique and revise drafts.</li>
+                    <li>LangChain middleware hooks for inputs validation, PII redaction, and tool gating.</li>
+                    <li>Durable execution runtime with human-in-the-loop approvals for budget shifts.</li>
+                  </ul>
+                </div>
+                <div class="spec-group">
+                  <span class="spec-header">Outcome / Impact</span>
+                  <p class="spec-val text-success">Saves 92% of research time, converting manual 8-hour strategy analyses into autonomous 15-minute runs.</p>
+                </div>
+              </div>
+
+              <div class="project-tech-row">
                 <span>LangChain</span>
-                <span>Faiss</span>
-                <span>FastEmbed</span>
+                <span>Playwright</span>
+                <span>SQLite</span>
+                <span>PostgreSQL</span>
+                <span>LangSmith</span>
+                <span>Python</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/DevMittal1" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Repository
+                </a>
+                <span class="link-divider"></span>
+                <a href="docs/woocommerce_deepagent.md" target="_blank" rel="noopener noreferrer" class="link-btn accent">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Detailed Spec
+                </a>
+              </div>
+            </article>
+
+            <!-- PROJECT 3: Real-Time Voice AI -->
+            <article class="project-card" id="project-voice-salon" data-category="voice">
+              <div class="project-badge">CONVERSATIONAL AI</div>
+              <h3 class="project-title">Real-Time Voice AI Salon Receptionist</h3>
+              <p class="project-summary">Bilingual voice assistant automating phone calls, scheduling bookings/rescheduling, stylist availability lookups, and human handoffs.</p>
+              
+              <div class="project-specs-box">
+                <div class="spec-group">
+                  <span class="spec-header">Core Challenge</span>
+                  <p class="spec-val">Maintaining sub-second natural voice conversational latency and handling caller interruptions seamlessly.</p>
+                </div>
+                <div class="spec-group">
+                  <span class="spec-header">Architecture Features</span>
+                  <ul class="spec-list">
+                    <li>Twilio Media Streams streaming raw call audio over low-latency WebSockets.</li>
+                    <li>LiveKit Agents voice-agent runtime for STT-LLM-TTS pipeline orchestration.</li>
+                    <li>Gemini 3.1 Flash Live Preview low-latency model with custom LangChain tool calling.</li>
+                  </ul>
+                </div>
+                <div class="spec-group">
+                  <span class="spec-header">Outcome / Impact</span>
+                  <p class="spec-val text-success">Achieves instant response speeds to phone inquiries, absorbing high call volumes in French and English.</p>
+                </div>
+              </div>
+
+              <div class="project-tech-row">
+                <span>Twilio</span>
+                <span>LiveKit</span>
+                <span>Gemini 3.1</span>
+                <span>LangChain</span>
+                <span>FastAPI</span>
+                <span>WebSockets</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/DevMittal1" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Repository
+                </a>
+                <span class="link-divider"></span>
+                <a href="docs/aivly_voiceAIAgent.md" target="_blank" rel="noopener noreferrer" class="link-btn accent">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Detailed Spec
+                </a>
+              </div>
+            </article>
+
+            <!-- PROJECT 4: Legal RAG Pipeline -->
+            <article class="project-card" id="project-legal-rag" data-category="rag">
+              <div class="project-badge">RAG PIPELINE</div>
+              <h3 class="project-title">Legal RAG Research Pipeline</h3>
+              <p class="project-summary">Enterprise-grade hybrid document intelligence system over 50K+ contracts, case laws, and statutes for legal teams.</p>
+              
+              <div class="project-specs-box">
+                <div class="spec-group">
+                  <span class="spec-header">Core Challenge</span>
+                  <p class="spec-val">Eliminating legal hallucination risks and processing legacy PDF scans across French and English texts.</p>
+                </div>
+                <div class="spec-group">
+                  <span class="spec-header">Architecture Features</span>
+                  <ul class="spec-list">
+                    <li>Hybrid search blending BM25 keyword search (OpenSearch) and dense vectors (Voyage-law-2).</li>
+                    <li>Dual Reciprocal Rank Fusion (RRF) and Cohere Rerank v4 for relevance optimization.</li>
+                    <li>Hierarchical splitting and spaCy Named Entity Recognition for faceted metadata filtering.</li>
+                  </ul>
+                </div>
+                <div class="spec-group">
+                  <span class="spec-header">Outcome / Impact</span>
+                  <p class="spec-val text-success">Achieves high-precision retrieval (>90% accuracy) and multi-hop legal answers under 2.5s P90 latency.</p>
+                </div>
+              </div>
+
+              <div class="project-tech-row">
+                <span>OpenSearch</span>
+                <span>Voyage-law-2</span>
+                <span>Cohere Rerank</span>
+                <span>FastAPI</span>
+                <span>AWS SQS</span>
                 <span>Docker</span>
               </div>
               
@@ -416,101 +558,9 @@
                   Repository
                 </a>
                 <span class="link-divider"></span>
-                <a href="#systems" class="link-btn accent">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7zm10 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-                  View Architecture
-                </a>
-              </div>
-            </article>
-
-            <!-- PROJECT 2: Voice HR Agent -->
-            <article class="project-card" id="project-voice" data-category="voice">
-              <div class="project-badge">CONVERSATIONAL AI</div>
-              <h3 class="project-title">Voice AI HR Operations Assistant</h3>
-              <p class="project-summary">Automates first-line HR benefits operations and candidate screening conversations through low-latency voice-driven system execution.</p>
-              
-              <div class="project-specs-box">
-                <div class="spec-group">
-                  <span class="spec-header">Core Challenge</span>
-                  <p class="spec-val">Maintaining sub-second natural voice conversational rhythm while querying active database memory clusters.</p>
-                </div>
-                <div class="spec-group">
-                  <span class="spec-header">Architecture Features</span>
-                  <ul class="spec-list">
-                    <li>Dynamic audio stream buffers chunked into high-availability web-sockets.</li>
-                    <li>Dual-path intent classification running in parallel to raw state machine loops.</li>
-                    <li>Sleek human-in-the-loop transition queues for high-ambiguity intents.</li>
-                  </ul>
-                </div>
-                <div class="spec-group">
-                  <span class="spec-header">Outcome / Impact</span>
-                  <p class="spec-val text-success">Maintains 940ms end-to-end voice loop latency, absorbing 74% of first-line employee query volumes.</p>
-                </div>
-              </div>
-
-              <div class="project-tech-row">
-                <span>WebSockets</span>
-                <span>FastAPI</span>
-                <span>Whisper-API</span>
-                <span>Redis</span>
-                <span>ElevenLabs</span>
-              </div>
-              
-              <div class="project-links">
-                <a href="https://github.com/DevMittal1" target="_blank" rel="noopener noreferrer" class="link-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  Repository
-                </a>
-                <span class="link-divider"></span>
-                <a href="#" class="link-btn muted-demo">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                  Play Audio Demo
-                </a>
-              </div>
-            </article>
-
-            <!-- PROJECT 3: Instagram Multi-Agent -->
-            <article class="project-card" id="project-agent" data-category="agentic">
-              <div class="project-badge">MULTI-AGENT SYSTEM</div>
-              <h3 class="project-title">Multi-Agent Social Conversation System</h3>
-              <p class="project-summary">Orchestrates specialized, isolated agents executing structured roles to manage, qualify, and convert social channel operations.</p>
-              
-              <div class="project-specs-box">
-                <div class="spec-group">
-                  <span class="spec-header">Core Challenge</span>
-                  <p class="spec-val">Avoiding agent routing loops and managing session-state recovery across long asynchronous delays.</p>
-                </div>
-                <div class="spec-group">
-                  <span class="spec-header">Architecture Features</span>
-                  <ul class="spec-list">
-                    <li>Dynamic Router/Planner node managing handoffs via explicit LangGraph state-charts.</li>
-                    <li>Context compression layers reducing token footprint during multi-turn chats.</li>
-                    <li>Isolated safety guardrail agents tracking structural constraints and policies.</li>
-                  </ul>
-                </div>
-                <div class="spec-group">
-                  <span class="spec-header">Outcome / Impact</span>
-                  <p class="spec-val text-success">Successfully automated qualification sequences for 14,000+ interactions, driving a 31% lead uplift.</p>
-                </div>
-              </div>
-
-              <div class="project-tech-row">
-                <span>LangGraph</span>
-                <span>LangChain</span>
-                <span>PostgreSQL</span>
-                <span>Redis</span>
-                <span>Meta API</span>
-              </div>
-              
-              <div class="project-links">
-                <a href="https://github.com/DevMittal1" target="_blank" rel="noopener noreferrer" class="link-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  Repository
-                </a>
-                <span class="link-divider"></span>
-                <a href="#" class="link-btn muted-demo">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 21v2M12 18H3"/></svg>
-                  Live Trace View
+                <a href="docs/rag.md" target="_blank" rel="noopener noreferrer" class="link-btn accent">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Detailed Spec
                 </a>
               </div>
             </article>
@@ -551,8 +601,8 @@
                 <div class="experience-associated-projects">
                   <span class="assoc-label">Associated Systems:</span>
                   <div class="assoc-links">
-                    <a href="#project-voice" class="assoc-project-link">Voice AI Conversational Engine</a>
-                    <a href="#project-agent" class="assoc-project-link">Multi-Agent Commerce Orchestration</a>
+                    <a href="#project-voice-salon" class="assoc-project-link">Voice AI Conversational Engine</a>
+                    <a href="#project-shopify-multiagent" class="assoc-project-link">Multi-Agent Commerce Orchestration</a>
                   </div>
                 </div>
               </div>
