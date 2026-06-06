@@ -1,0 +1,320 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+h2.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body{font-family:var(--font-sans)}
+.portfolio{padding:1.5rem 0 2rem}
+.header-bar{display:flex;align-items:center;gap:12px;margin-bottom:2rem;padding-bottom:1rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.header-bar h1{font-size:18px;font-weight:500;color:var(--color-text-primary)}
+.header-bar span{font-size:13px;color:var(--color-text-secondary)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--color-text-tertiary)}
+.project-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);margin-bottom:1.5rem;overflow:hidden}
+.project-header{display:flex;align-items:flex-start;gap:16px;padding:1.25rem 1.25rem 1rem;border-bottom:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary)}
+.proj-num{font-size:12px;font-weight:500;color:var(--color-text-secondary);background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:4px 10px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.proj-title-group{flex:1}
+.proj-title{font-size:17px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.proj-sub{font-size:13px;color:var(--color-text-secondary)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:0.75rem 1.25rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary)}
+.tag.blue{background:var(--color-background-info);color:var(--color-text-info);border-color:transparent}
+.tag.teal{background:#e1f5ee;color:#0f6e56;border-color:transparent}
+.tag.amber{background:#faeeda;color:#854f0b;border-color:transparent}
+.tag.purple{background:#eeedfe;color:#534ab7;border-color:transparent}
+.tag.coral{background:#faece7;color:#993c1d;border-color:transparent}
+@media (prefers-color-scheme:dark){
+.tag.teal{background:#04342c;color:#9fe1cb}
+.tag.amber{background:#412402;color:#fac775}
+.tag.purple{background:#26215c;color:#afa9ec}
+.tag.coral{background:#4a1b0c;color:#f0997b}
+}
+.sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.section{padding:1rem 1.25rem;border-right:0.5px solid var(--color-border-tertiary);border-bottom:0.5px solid var(--color-border-tertiary)}
+.section:nth-child(2n){border-right:none}
+.section:nth-child(3),.section:nth-child(4){border-bottom:none}
+.section-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-tertiary);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.section-label i{font-size:14px}
+.section-body{font-size:13px;color:var(--color-text-secondary);line-height:1.65}
+.metrics{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.metric{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 12px;flex:1;min-width:70px;text-align:center}
+.metric-val{font-size:18px;font-weight:500;color:var(--color-text-primary);display:block}
+.metric-lbl{font-size:11px;color:var(--color-text-tertiary);display:block;margin-top:2px}
+.arch-flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:8px}
+.arch-node{font-size:11px;font-weight:500;padding:4px 8px;border-radius:var(--border-radius-md);background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary);white-space:nowrap}
+.arch-arrow{font-size:12px;color:var(--color-text-tertiary)}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:0 1.25rem}
+.impact-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.impact-row:last-child{margin-bottom:0}
+.impact-icon{width:18px;height:18px;border-radius:50%;background:var(--color-background-success,#eaf3de);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.impact-icon i{font-size:11px;color:var(--color-text-success,#3b6d11)}
+</style>
+
+<div class="portfolio">
+<h2 class="sr-only">AI project portfolio covering multiagent, deep agent, voice AI, knowledge graph RAG, and XGBoost</h2>
+
+<div class="header-bar">
+  <i class="ti ti-brain" style="font-size:20px;color:var(--color-text-secondary)" aria-hidden="true"></i>
+  <h1>AI Project Portfolio</h1>
+  <div class="dot"></div>
+  <span>5 projects · ML · LLM · Agents · Data Science</span>
+</div>
+
+<div class="project-card">
+  <div class="project-header">
+    <div class="proj-num">01 / Multiagent</div>
+    <div class="proj-title-group">
+      <div class="proj-title">Enterprise MultiAgent Orchestration Platform</div>
+      <div class="proj-sub">Customer support automation across 10K+ daily queries — multiple domains, one system</div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag blue">LangGraph</span><span class="tag blue">GPT-4o</span><span class="tag">Redis</span><span class="tag">Pinecone</span><span class="tag teal">Supervisor Pattern</span><span class="tag">FastAPI</span><span class="tag purple">Multi-Agent</span>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label"><i class="ti ti-target" aria-hidden="true"></i>Problem</div>
+      <div class="section-body">A single monolithic LLM chain couldn't handle domain specialization — billing queries, technical support, escalations, and proactive outreach all needed different context, tools, and permissions. Hallucinations in high-stakes billing responses were a compliance risk.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-user" aria-hidden="true"></i>My Role</div>
+      <div class="section-body">Designed and built the full orchestration layer — supervisor agent, role-based sub-agent registry, inter-agent message passing, and shared memory bus. Owned the tool-calling schema, agent prompt design, and production deployment on AWS ECS.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-circuit-board" aria-hidden="true"></i>Architecture</div>
+      <div class="section-body">
+        <div class="arch-flow">
+          <span class="arch-node">Inbound Router</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Supervisor LLM</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Sub-Agents</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Memory Bus</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Response</span>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:var(--color-text-secondary)">Supervisor routes via intent classification. Sub-agents: Search, Code Exec, CRM Writer, Escalation. Shared Redis memory lets agents read prior turns. LangGraph state machine enforces handoff contracts.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-chart-bar" aria-hidden="true"></i>Results</div>
+      <div class="section-body">
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">65%</span><span class="metric-lbl">Cost reduction</span></div>
+          <div class="metric"><span class="metric-val">4×</span><span class="metric-lbl">Throughput</span></div>
+          <div class="metric"><span class="metric-val">91%</span><span class="metric-lbl">Accuracy</span></div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--color-text-secondary)">Zero billing hallucinations post-deployment. Escalation rate dropped 38%.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="project-header">
+    <div class="proj-num">02 / DeepAgent</div>
+    <div class="proj-title-group">
+      <div class="proj-title">DeepAgent — Autonomous Research & Analysis Engine</div>
+      <div class="proj-sub">Long-horizon reasoning agent that replaces 8-hour analyst workflows with 15-minute runs</div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag blue">Claude 3.5</span><span class="tag blue">Tool Use</span><span class="tag">LangChain</span><span class="tag">Playwright</span><span class="tag teal">ReAct Loop</span><span class="tag purple">Self-Reflection</span><span class="tag">Python</span>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label"><i class="ti ti-target" aria-hidden="true"></i>Problem</div>
+      <div class="section-body">Strategy analysts spent 8+ hours per competitive report: manual web research, data extraction, chart generation, synthesis. Reports were inconsistent in quality and frequently stale before delivery. There was no memory of prior research runs.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-user" aria-hidden="true"></i>My Role</div>
+      <div class="section-body">Built the full DeepAgent system — planning module, tool registry (browser, Python REPL, file writer, search API), reflection loop that critiques and revises its own outputs, and a session persistence layer. Also designed the evaluation harness against 50 ground-truth reports.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-circuit-board" aria-hidden="true"></i>Architecture</div>
+      <div class="section-body">
+        <div class="arch-flow">
+          <span class="arch-node">Goal Input</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Planner</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Executor</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Critic</span>
+          <span class="arch-arrow">↺</span>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:var(--color-text-secondary)">ReAct loop with a Critic agent that scores output completeness and triggers replanning. Tools: Playwright browser, Python REPL for charting, DuckDuckGo search, Markdown file writer. Session memory via SQLite.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-chart-bar" aria-hidden="true"></i>Results</div>
+      <div class="section-body">
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">92%</span><span class="metric-lbl">Time saved</span></div>
+          <div class="metric"><span class="metric-val">15 min</span><span class="metric-lbl">Per report</span></div>
+          <div class="metric"><span class="metric-val">87%</span><span class="metric-lbl">Fact accuracy</span></div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--color-text-secondary)">Adopted by 12 analysts. Lesson: critic reflection loop was the single biggest quality lever.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="project-header">
+    <div class="proj-num">03 / Voice AI</div>
+    <div class="proj-title-group">
+      <div class="proj-title">Real-Time Voice AI Agent — Healthcare Triage</div>
+      <div class="proj-sub">Live phone-based triage agent reducing call center load for non-emergency patient queries</div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag blue">Whisper STT</span><span class="tag blue">ElevenLabs</span><span class="tag">Twilio</span><span class="tag">WebSockets</span><span class="tag teal">Streaming TTS</span><span class="tag amber">EHR Integration</span><span class="tag">FastAPI</span>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label"><i class="ti ti-target" aria-hidden="true"></i>Problem</div>
+      <div class="section-body">A regional healthcare network's call center handled 3,000+ daily calls, 70% of which were routine (prescription status, appointment reminders, lab results). Wait times averaged 18 minutes. Staff were bottlenecked on work a voice agent could handle safely.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-user" aria-hidden="true"></i>My Role</div>
+      <div class="section-body">Built the full real-time STT→LLM→TTS pipeline — WebSocket audio streaming, turn detection, intent classification, EHR read integration, and fallback-to-human escalation logic. Owned latency optimization (target: under 900ms perceived response time).</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-circuit-board" aria-hidden="true"></i>Architecture</div>
+      <div class="section-body">
+        <div class="arch-flow">
+          <span class="arch-node">Twilio Call</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Whisper STT</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Intent LLM</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">EHR API</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">ElevenLabs</span>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:var(--color-text-secondary)">Streaming WebSocket audio chunked at 100ms. VAD (voice activity detection) handles turn-taking. Intent classifier routes to EHR lookup, FAQ retrieval, or live-agent handoff. Responses streamed back as audio in real time.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-chart-bar" aria-hidden="true"></i>Results</div>
+      <div class="section-body">
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">70%</span><span class="metric-lbl">Deflection</span></div>
+          <div class="metric"><span class="metric-val">4.2/5</span><span class="metric-lbl">CSAT score</span></div>
+          <div class="metric"><span class="metric-val">780ms</span><span class="metric-lbl">Avg latency</span></div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--color-text-secondary)">Staff reallocated from triage to complex care. Lesson: VAD accuracy was more critical than LLM quality for perceived naturalness.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="project-header">
+    <div class="proj-num">04 / KG-RAG</div>
+    <div class="proj-title-group">
+      <div class="proj-title">Knowledge Graph RAG — Legal Document Intelligence</div>
+      <div class="proj-sub">Structured, relationship-aware retrieval over 50K+ legal documents for multi-hop reasoning</div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag blue">Neo4j</span><span class="tag blue">LlamaIndex</span><span class="tag">spaCy NER</span><span class="tag teal">Graph Traversal</span><span class="tag purple">OpenAI Embeddings</span><span class="tag">FastAPI</span><span class="tag">Cypher</span>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label"><i class="ti ti-target" aria-hidden="true"></i>Problem</div>
+      <div class="section-body">A law firm's 50K+ documents — contracts, case law, filings — had no unified retrieval. Standard vector RAG failed on cross-document questions like "which precedents contradict Clause 7 in this contract?" Flat chunking destroyed relational context.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-user" aria-hidden="true"></i>My Role</div>
+      <div class="section-body">Designed the KG schema (entities: Party, Clause, Case, Precedent, Date; relations: cites, contradicts, amends, involves). Built the NER pipeline, graph ingestion, hybrid retrieval combining vector similarity with Cypher graph traversal, and the query-to-graph translation layer.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-circuit-board" aria-hidden="true"></i>Architecture</div>
+      <div class="section-body">
+        <div class="arch-flow">
+          <span class="arch-node">Doc Ingest</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">spaCy NER</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Neo4j KG</span>
+        </div>
+        <div class="arch-flow" style="margin-top:6px">
+          <span class="arch-node">User Query</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Vector + Cypher</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Subgraph</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">LLM Answer</span>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:var(--color-text-secondary)">Hybrid retrieval: vector search seeds candidate nodes; Cypher traversal expands 2–3 hops to surface related entities. Subgraph serialized as structured context for the LLM.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-chart-bar" aria-hidden="true"></i>Results</div>
+      <div class="section-body">
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">83%</span><span class="metric-lbl">Retrieval accuracy</span></div>
+          <div class="metric"><span class="metric-val">+22pp</span><span class="metric-lbl">vs vanilla RAG</span></div>
+          <div class="metric"><span class="metric-val">2.1s</span><span class="metric-lbl">P90 latency</span></div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--color-text-secondary)">Multi-hop accuracy improved most. Lesson: graph traversal depth must be capped — 4+ hops degraded precision severely.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="project-header">
+    <div class="proj-num">05 / XGBoost</div>
+    <div class="proj-title-group">
+      <div class="proj-title">XGBoost Churn Prediction & Intervention Model</div>
+      <div class="proj-sub">Early-warning system for B2B SaaS churn — SHAP-explained, deployed in CRM</div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag blue">XGBoost</span><span class="tag blue">SHAP</span><span class="tag">scikit-learn</span><span class="tag">Optuna</span><span class="tag amber">MLflow</span><span class="tag teal">dbt + Snowflake</span><span class="tag">Pandas</span>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label"><i class="ti ti-target" aria-hidden="true"></i>Problem</div>
+      <div class="section-body">An 8% monthly churn rate was costing ~$2.4M ARR annually. The CS team was reactive — they only learned of churn risk at renewal conversations. No behavioral signal analysis existed; feature usage, login frequency, and support ticket patterns were entirely untapped.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-user" aria-hidden="true"></i>My Role</div>
+      <div class="section-body">Owned end-to-end: feature engineering from raw event logs (120+ engineered features), XGBoost training with Optuna hyperparameter search, SHAP explainability layer, model deployment via REST API into Salesforce, and MLflow experiment tracking. Also designed the intervention playbook based on SHAP drivers.</div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-circuit-board" aria-hidden="true"></i>Architecture</div>
+      <div class="section-body">
+        <div class="arch-flow">
+          <span class="arch-node">Snowflake Events</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">dbt Features</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">XGBoost</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">SHAP</span>
+          <span class="arch-arrow">→</span>
+          <span class="arch-node">Salesforce</span>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:var(--color-text-secondary)">Weekly batch scoring pipeline. dbt transforms 12 raw tables into 120 behavioral, engagement, and support features. Optuna tuned 400 trials. SHAP values surface the top 3 churn drivers per account in the CRM card.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label"><i class="ti ti-chart-bar" aria-hidden="true"></i>Results</div>
+      <div class="section-body">
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">0.91</span><span class="metric-lbl">ROC-AUC</span></div>
+          <div class="metric"><span class="metric-val">31%</span><span class="metric-lbl">Churn reduction</span></div>
+          <div class="metric"><span class="metric-val">$740K</span><span class="metric-lbl">ARR saved</span></div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--color-text-secondary)">CS team adoption was 94% after SHAP explanations made predictions trustworthy. Lesson: model explainability drove adoption more than accuracy alone.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
