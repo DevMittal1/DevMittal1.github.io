@@ -194,22 +194,6 @@ sequenceDiagram
     API->>LLM: Answer prompt with top chunks
     LLM-->>User: Answer with citations
 ```
-
-## Implementation Plan (8-Week MVP)
-
-| Week | Activities                                | Milestone                         |
-|------|-------------------------------------------|-----------------------------------|
-| 1    | **Design & Setup:** Finalize schema, set up AWS infra (VPC, S3, SQS, OpenSearch cluster). | Infra & team onboarding |
-| 2    | **Data Pipeline:** Build ingestion workers: S3→SQS→chunker. Implement chunking & metadata extraction (spaCy NER). | Working ingestion of test docs |
-| 3    | **Indexing:** Integrate OpenSearch (BM25) and vector store (initial: OpenSearch k-NN). Ingest sample 5K docs. | Hybrid index populated |
-| 4    | **Retrievers:** Implement BM25 query & embedding search (LangChain/LlamaIndex). Develop query API (FastAPI). | Basic retrieval works end-to-end |
-| 5    | **Reranking & Fusion:** Integrate Cohere reranker. Tune RRF parameters. Build context assembly & compression. | Reranker integrated, test improved precision |
-| 6    | **LLM Integration:** Build answer-generation agent with LLM. Create prompt templates, structured output, and citation. | QA pipeline end-to-end with citations |
-| 7    | **Compliance & UI:** Add consent/Human-handoff checks. Setup logging/monitoring (LangSmith, Prometheus). Initial UI/prototype. | Compliance workflows tested |
-| 8    | **Evaluation & Tuning:** Benchmark on held-out legal QA pairs. Optimize latency. Finalize documentation, run user demos. | MVP demo & evaluation report |
-
-**Team Roles:** Project manager, 2 ML engineers (NLP/retrieval), 2 backend engineers (API/infra), 1 DevOps, 1 legal SME.
-
 ## Costs Estimate
 
 | Item                  | Estimate                             | Notes                             |

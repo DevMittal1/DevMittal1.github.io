@@ -70,10 +70,7 @@ Machine Learning Engineer specializing in high-precision Retrieval-Augmented Gen
 ---
 
 ## Education
-
-*   **National Institute of Technology, Kurukshetra**
-    *   BTech in Production and Industrial Engineering *(Aug 2020 – May 2024)*
-    *   **GPA:** 8.2 / 10.0
+**National Institute of Technology, Kurukshetra** | **BTech** | **GPA:** 8.2 / 10.0
 
 ---
 
